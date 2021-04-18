@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="base-container">
+  <h1 id="form-title">{{ page_titlebody }}</h1>
+
+  <div class="main-secspace">
+    <div class="main-container">氏名をご記入下さい。*</div>
+    <div class="main-container">
+      <input type="text" name="name" class="obj-fullwide form-content form-noEmpty" placeholder="氏名を記入">
+    </div>
+  </div>
+
+  <div class="main-secspace">
+    <div class="main-container">年代を選んで下さい。*</div>
+    <div class="main-container">
+      <select name="age" class="obj-fullwide form-content form-noEmpty">
+        <option disabled value="">年代を選択</option>
+        <option value="0">10代以下</option>
+        <option value="1">10代</option>
+        <option value="2">20代</option>
+        <option value="3">30代</option>
+        <option value="4">40代</option>
+        <option value="5">50代</option>
+        <option value="6">60代以上</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="main-secspace">
+    <div class="main-container">最もよく利用する Git サービスはどれですか。*</div>
+    <div class="main-container">
+      <select name="git-service" class="obj-fullwide form-content form-noEmpty">
+        <option disabled value="">サービスを選択</option>
+        <option value="0">GitHub</option>
+        <option value="1">GitLab</option>
+        <option value="2">利用していない</option>
+        <option value="3">その他</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="main-secspace">
+    <div class="main-container">* は必須解答の項目です。<span id="info-incorrect" style="display: none;">未回答の項目があります。</span></div>
+  </div>
+
+  <div class="button-container">
+    <a href="/"><div class="button-content">トップへ戻る</div></a>
+  </div>
+  <div class="button-container">
+    <div class="button-content" onclick="form_send()">回答を送信</div>
+  </div>
+</div>
+
+{% endblock %}
