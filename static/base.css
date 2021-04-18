@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* Base */
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0px;
+  color: rgb(0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* Main */
+.base-container {
+  width: 700px;
+  margin: 20px auto;
+}
+@media (max-width: 700px) {
+  .base-container {
+    width: 100%;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px 20px 10px 20px;
+  padding: 0.1em 0.2em;
+  border-bottom: 1px solid hsl(0, 0%, 50%);
+}
+
+.main-container {
+  font-size: 1rem;
+  margin: 10px 20px;
+}
+
+.button-container {
+  width: 250px;
+  margin: 20px auto;
+}
+
+.button-content {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: hsl(240, 70%, 60%);
+  width: 100%;
+  padding: 1rem 0px;
+}
+.button-content:hover {
+  background-color: hsl(240, 70%, 80%);
+}
+
+#info-incorrect {
+  color: hsl(0, 70%, 60%);
+}
+
+
+/* Footer */
+footer {
+  font-size: 0.8rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: hsl(240, 100%, 20%);
+  margin: 0px;
+  padding: 2em;
+}
+footer::after {
+  content: "© 2021 aKuad (Publishing with MIT License)";
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+      function send_text() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("Post", "/test", true);
+        xhr.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+        xhr.send('Sending');
+      }
+      function send_json() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("Post", "/test", true);
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.send('{"Sending": "hello"}');
+      }
+      function send_urlform() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("Post", "/test", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+        xhr.send('dtf1=256');
+      }
+      function send_urlarg() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("Post", "/test?dt1=500", true);
+        xhr.send('');
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>Send</h1>
+    <input type="button" value="Send plain" onclick="send_plain()"><br>
+    <input type="button" value="Send plain" onclick="send_json()"><br>
+    <input type="button" value="Send plain" onclick="send_urlform()"><br>
+    <input type="button" value="Send plain" onclick="send_urlarg()">
+  </body>
+</html>

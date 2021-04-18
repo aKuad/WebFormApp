@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* Section space */
+.main-secspace {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+/* Input objects */
+.obj-fullwide {
+  font-size: 1rem;
+  display: block;
+  width: calc(100% - 1.0em - 4px);
+  margin: 0px 0px 0px 0px;
+  padding: 0.3em 0.5em;
+  border: 2px solid hsl(240, 70%, 60%);
+}
+.obj-fullwide:focus {
+  border: 2px solid hsl(240, 70%, 80%);
+  outline: none;
+}
+select.obj-fullwide {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+}
